@@ -1,0 +1,11 @@
+<h1>Here</h1>
+<div id="parent" data-bind="scope: 'parent-scope'" >
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "#parent": {
+            "Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getJsLayout(); ?>
+        }
+    }
+</script>

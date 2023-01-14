@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="helloworld_index_index"
+                   template="GFNL_KnockoutJsChild::knockout.phtml" cacheable="false">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="parent-scope" xsi:type="array">
+                                <item name="component" xsi:type="string">GFNL_KnockoutJsChild/js/view/parent
+                                </item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">GFNL_KnockoutJsChild/parent</item>
+                                </item>
+                                <item name="children" xsi:type="array">
+                                    <item name="child_a" xsi:type="array">
+                                        <item name="sortOrder" xsi:type="string">2</item>
+                                        <item name="component" xsi:type="string">
+                                            GFNL_KnockoutJsChild/js/view/parent
+                                        </item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">
+                                                GFNL_KnockoutJsChild/child_a
+                                            </item>
+                                        </item>
+                                    </item>
+                                    <item name="child_b" xsi:type="array">
+                                        <item name="sortOrder" xsi:type="string">1</item>
+                                        <item name="component" xsi:type="string">
+                                            GFNL_KnockoutJsChild/js/view/child_b
+                                        </item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">
+                                                GFNL_KnockoutJsChild/child_b
+                                            </item>
+                                        </item>
+                                        <item name="displayArea" xsi:type="string">child_b</item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
