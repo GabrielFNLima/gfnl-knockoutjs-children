@@ -1,5 +1,15 @@
 <h1>parent</h1>
 
+<h3>getRegion</h3>
 <!-- ko foreach: getRegion('child_b') -->
 <!--ko template: getTemplate() --> <!--/ko -->
 <!-- /ko -->
+
+<h3>requestChild</h3>
+<div data-bind="scope: requestChild('child_a')">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<h3>Call directly the template</h3>
+<!-- ko template: "GFNL_KnockoutJsChild/child_c" --><!-- /ko -->
+
