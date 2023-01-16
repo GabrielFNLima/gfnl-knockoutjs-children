@@ -1,0 +1,30 @@
+<h1>Create Ko's children templates without using layout</h1>
+<div id="parent-ko" data-bind="scope: 'parent-ko-scope'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+            {
+                "#parent-ko": {
+                    "Magento_Ui/js/core/app": {
+                        "components": {
+                            "parent-ko-scope": {
+                                "component": "GFNL_KnockoutJsChild/js/view/parent",
+                                "title":"<?= __('Title') ?>",
+                                "children": {
+                                    "child_a":{
+                                        "template":"GFNL_KnockoutJsChild/child_a",
+                                        "component": "GFNL_KnockoutJsChild/js/view/parent"
+                                    },
+                                    "child_b":{
+                                        "displayArea":"child_b",
+                                        "template":"GFNL_KnockoutJsChild/child_b",
+                                        "component": "GFNL_KnockoutJsChild/js/view/child_b"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+</script>
