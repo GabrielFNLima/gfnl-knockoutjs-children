@@ -1,0 +1,14 @@
+<h1>parent foreach</h1>
+
+<h2>Load all children at once</h2>
+<!-- ko foreach: elems() -->
+<!-- ko template: getTemplate() --> <!-- /ko -->
+<!-- /ko -->
+
+
+<h2>Call children inside foreach array</h2>
+
+<!-- ko foreach: { data: arraryTest, as: 'value' } -->
+<!-- ko template: { name: $parent.elems()[0].getTemplate(), data: { option: value } } --><!-- /ko --> <!-- child_d -->
+<!-- /ko -->
+

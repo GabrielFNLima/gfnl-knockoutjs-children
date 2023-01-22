@@ -44,8 +44,11 @@
                     </argument>
                 </arguments>
             </block>
-            <block class="Magento\Framework\View\Element\Template" name="ko.children.withou.xml"
+            <block class="Magento\Framework\View\Element\Template" name="ko.children.without.xml"
                    template="GFNL_KnockoutJsChild::ko_child_without_xml.phtml" cacheable="false">
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="ko.children.foreach"
+                   template="GFNL_KnockoutJsChild::ko_foreach.phtml" cacheable="false">
             </block>
         </referenceContainer>
     </body>

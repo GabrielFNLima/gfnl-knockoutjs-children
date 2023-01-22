@@ -1,0 +1,27 @@
+<h1>ForEach with the children</h1>
+<div id="parent-foreach-ko" data-bind="scope: 'parent-foreach-scope'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+            {
+                "#parent-foreach-ko": {
+                    "Magento_Ui/js/core/app": {
+                        "components": {
+                            "parent-foreach-scope": {
+                                "component": "GFNL_KnockoutJsChild/js/view/parent",
+                                "template":"GFNL_KnockoutJsChild/parent_foreach",
+                                "title":"<?= __('Title') ?>",
+                                "children": {
+                                    "child_d":{
+                                        "displayArea":"child_d",
+                                        "template":"GFNL_KnockoutJsChild/child_d",
+                                        "component": "GFNL_KnockoutJsChild/js/view/child_d"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+</script>
