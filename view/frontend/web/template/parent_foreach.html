@@ -9,6 +9,8 @@
 <h2>Call children inside foreach array</h2>
 
 <!-- ko foreach: { data: arraryTest, as: 'value' } -->
-<!-- ko template: { name: $parent.elems()[0].getTemplate(), data: { option: value } } --><!-- /ko --> <!-- child_d -->
+<!-- ko with: $parent.getChild('child_d')-->
+<!-- ko template: { name: getTemplate(), data: { option: value } } --> <!--/ko -->
+<!-- /ko -->
 <!-- /ko -->
 
